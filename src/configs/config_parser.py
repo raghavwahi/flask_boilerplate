@@ -14,7 +14,7 @@ class ConfigParser:
         self.parse_config._interpolation = configparser.ExtendedInterpolation()
         self.parse_config.optionxform = str
         self.filename = _file
-        filepath = f"./src/config/{_file}"
+        filepath = f"./src/configs/{_file}"
         self.filepath = filepath if _file.endswith(".ini") else f"{filepath}.ini"
         parse_response = self.parse_config.read(self.filepath)
 

@@ -1,7 +1,9 @@
 """This module contains all the functional api routes related to application."""
-from flask import Blueprint, jsonify
+import logging
 
-application_apis = Blueprint("application_apis", __name__)
+from flask import Blueprint, jsonify, request
+
+app_apis = Blueprint("app_apis", __name__)
 
 ROUTES = {
     "test": "/test",
@@ -12,8 +14,8 @@ METHODS = {
     "post": ["POST"],
 }
 
-@application_apis.route(ROUTES["test"], methods=METHODS["get"])
-@application_apis.route(ROUTES["home"], methods=METHODS["get"])
+@app_apis.route(ROUTES["test"], methods=METHODS["get"])
+@app_apis.route(ROUTES["home"], methods=METHODS["get"])
 def test():
     """
     This is a test API to check if application is running or not. A 200 status code will suffice
@@ -21,4 +23,7 @@ def test():
     return: tuple
     """
     message = "Application is up and running."
+    identifier = request.form.get("identifier", default="generic", type=str)
+    logger = logging.getLogger(identifier)
+    logger.info(message)
     return jsonify(contents="Success", message=message, data={}), 200
