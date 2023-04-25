@@ -1,6 +1,6 @@
 # Flask Boilerplate
 
-This is a flask boilerplate code which can be used to set up a flask application.
+This is flask boilerplate code which can be used to set up a flask application.
 
 This boilerplate code consists of the following features:
 
