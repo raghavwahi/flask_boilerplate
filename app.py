@@ -1,6 +1,7 @@
 """This is a flask application boilerplate."""
 from flask import Flask, request
 
+from src import check_required_modules
 from src.routes.app_routes import app_apis
 from src.utils.logger_util import Logger
 
@@ -16,4 +17,5 @@ def init_logging_obj():
 
 
 if __name__ == "__main__":
+    check_required_modules()
     app.run(threaded=True)
