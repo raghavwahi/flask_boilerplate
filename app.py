@@ -1,4 +1,6 @@
 """This is a flask application boilerplate."""
+import os
+
 from flask import Flask, request
 
 from src import check_required_modules
@@ -18,4 +20,5 @@ def init_logging_obj():
 
 if __name__ == "__main__":
     check_required_modules()
-    app.run(threaded=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port, threaded=True)
