@@ -23,4 +23,4 @@ ENTRYPOINT ["python"]
 # exposed internal port
 EXPOSE 5010
 
-CMD ["web_index.py"]
+CMD ["app.py"]
