@@ -1,5 +1,5 @@
 # start by pulling the python image
-FROM python: 3.10.5
+FROM python:3.10.5
 
 # environment variables
 ENV PORT=5010
@@ -15,7 +15,7 @@ RUN python -m pip install --upgrade pip
 RUN pip install -r requirements.txt
 
 # copy every content from the local to the image
-COPY ./app
+COPY . /app
 
 # configure the container to run in an executed manner
 ENTRYPOINT ["python"]
