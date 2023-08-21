@@ -7,7 +7,8 @@ class ConfigParserError(Exception):
     """This class acts as a wrapper class for catching exceptions."""
 
 
-class ConfigParser:
+# Disabled too-few-public-methods since this class has a limited functionality.
+class ConfigParser:  # pylint: disable=too-few-public-methods
     """This class parses config(.ini) files."""
     def __init__(self, _file):
         self.parse_config = configparser.ConfigParser()

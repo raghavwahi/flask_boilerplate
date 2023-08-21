@@ -7,7 +7,8 @@ from datetime import datetime
 from src.configs.config_parser import ConfigParser
 
 
-class Logger:
+# Disabled too-few-public-methods since this class has a limited functionality.
+class Logger:  # pylint: disable=too-few-public-methods
     """This class initializes logging object used for application level logging."""
 
     def __init__(self, identifier):
