@@ -3,16 +3,15 @@ import logging
 
 from flask import Blueprint, jsonify, request
 
+from src.utils.helpers import fetch_request_methods
+
 app_apis = Blueprint("app_apis", __name__)
 
 ROUTES = {
     "test": "/test",
     "home": "/",
 }
-METHODS = {
-    "get": ["GET"],
-    "post": ["POST"],
-}
+METHODS = fetch_request_methods()
 
 @app_apis.route(ROUTES["test"], methods=METHODS["post"])
 @app_apis.route(ROUTES["home"], methods=METHODS["post"])
