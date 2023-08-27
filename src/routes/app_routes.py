@@ -14,8 +14,8 @@ METHODS = {
     "post": ["POST"],
 }
 
-@app_apis.route(ROUTES["test"], methods=METHODS["get"])
-@app_apis.route(ROUTES["home"], methods=METHODS["get"])
+@app_apis.route(ROUTES["test"], methods=METHODS["post"])
+@app_apis.route(ROUTES["home"], methods=METHODS["post"])
 def test():
     """
     This is a test API to check if application is running or not. A 200 status code will suffice
