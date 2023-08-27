@@ -3,6 +3,7 @@ This module contains class to parse config(.ini) files and also its custom excep
 """
 import configparser
 
+
 class ConfigParserError(Exception):
     """This class acts as a wrapper class for catching exceptions."""
 

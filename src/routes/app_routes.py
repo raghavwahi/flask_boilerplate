@@ -13,6 +13,7 @@ ROUTES = {
 }
 METHODS = fetch_request_methods()
 
+
 @app_apis.route(ROUTES["test"], methods=METHODS["post"])
 @app_apis.route(ROUTES["home"], methods=METHODS["post"])
 def test():
