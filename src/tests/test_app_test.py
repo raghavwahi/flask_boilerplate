@@ -1,6 +1,7 @@
 """This module test '/' and '/test' routes of the application."""
 import json
 
+
 def __prepare_payload():
     """
     This function prepares payload for the requests.
@@ -21,7 +22,7 @@ def test_home_identifier(client):
     response = client.post(route, data=__prepare_payload())
     contents = json.loads(response.data)["contents"]
     assert "Success" in contents
-    assert  response.status_code == 200
+    assert response.status_code == 200
 
 
 def test_home_without_identifier(client):
@@ -35,7 +36,7 @@ def test_home_without_identifier(client):
     response = client.post(route)
     contents = json.loads(response.data)["contents"]
     assert "Success" in contents
-    assert  response.status_code == 200
+    assert response.status_code == 200
 
 
 def test_test_identifier(client):
