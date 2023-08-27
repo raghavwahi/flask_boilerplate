@@ -30,12 +30,14 @@ Presented here is a Flask boilerplate code designed to facilitate the swift setu
 
 **Generating Lint Report:**
 
-1. Generate the lint report with the command `pylint src app.py --output lint_report.txt`. (The file *lint_report.txt*  is omitted from Git inclusion.)
+1. Install pylint module using command `pip install pylint`.
+2. Generate the lint report with the command `pylint src app.py --output lint_report.txt`. (The file *lint_report.txt*  is omitted from Git inclusion.)
 
 **Unit Testing and Code Coverage:**
 
-1. Execute test cases with `coverage run -m pytest`.
-2. Generate a code coverage report using `coverage html`.
+1. Install pytest and coverage module using command `pip install pytest coverage`.
+2. Execute test cases with `coverage run -m pytest`.
+3. Generate a code coverage report using `coverage html`.
 
 ---
 
