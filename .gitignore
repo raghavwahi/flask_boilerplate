@@ -130,3 +130,6 @@ dmypy.json
 
 # Pycharm cache
 .idea
+
+# lint report
+lint_report.txt
